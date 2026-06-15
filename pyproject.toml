@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lerobot_robot_franka"
+version = "0.0.4"
+description = "LeRobot Franka integration"
+readme = "README.md"
+authors = [
+  { name = "LiuRuochen", email = "488942248@qq.com" },
+]
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "numpy",
+  "teleop",
+  "lerobot>=0.4",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lerobot_robot_franka*"]
+exclude = ["*.egg-info"]
